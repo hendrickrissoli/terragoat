@@ -10,10 +10,11 @@ jobs:
    container:
      image: convisoappsec/flowcli
      env:
-       API_KEY:  ${{secrets.CONVISO_API_KEY}}
-       PROJECT_CODE: ${{secrets.CONVISO_PROJECT_KEY}}
-       API_URL: ${{secrets.CONVISO_HOMOLOGA_URL}}
+       FLOW_API_KEY:  ${{secrets.CONVISO_API_KEY}}
+       FLOW_PROJECT_CODE: ${{secrets.CONVISO_PROJECT_KEY}}
+       FLOW_API_URL: ${{secrets.CONVISO_HOMOLOGA_URL}}
    steps:
    - uses: actions/checkout@v2
+   
    - name: Run iac
      run: conviso iac run
