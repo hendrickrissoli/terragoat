@@ -15,6 +15,5 @@ jobs:
        FLOW_API_URL: ${{secrets.CONVISO_HOMOLOGA_URL}}
    steps:
    - uses: actions/checkout@v2
-   
    - name: Run iac
      run: conviso iac run
